@@ -1,0 +1,29 @@
+version: '3.4'
+
+networks:
+  mi-red:
+
+
+services:
+  # Servicio para la aplicación Java
+  app:
+    image: oeparraco/biblioteca-app:latest
+    ports:
+      - 8080:8080
+    networks:
+      - mi-red
+    depends_on:
+      - db
+
+  # Servicio para la base de datos MySQL
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: Oscar1992#
+      MYSQL_DATABASE: prueba
+      ##MYSQL_USER: root
+      ##MYSQL_PASSWORD: Oscar1992#
+    ports:
+      - 8002:3306
+    networks:
+      - mi-red
