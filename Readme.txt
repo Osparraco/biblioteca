@@ -4,6 +4,8 @@
 
 Para la ejecucion de la aplicación se requiere usar una version de Java 21 y ultima versiona de apache-maven
 Utilizar MySQL 8 
+Utiliza Docker hub y versionamiento en git
+Dependencias ejecuar maven
 
 Endpoints del CRUD utilizados,
 GET
